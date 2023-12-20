@@ -13,6 +13,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Allows this workflow to be imported
+  workflow_call:
+
 env:
   TEST_TEXT: Testing...
 
