@@ -33,7 +33,9 @@ jobs:
         uses: actions/cache@v3.3.2
         with:
           path: save.txt
-          key: save
+          key: ${{ runner.os }}-save-${{ hashFiles('save.txt') }}
+          restore-keys: |
+            {{ runner.os }}-save-
   
   test:
     runs-on: ubuntu-latest
@@ -43,7 +45,7 @@ jobs:
         uses: actions/cache@v3.3.2
         with:
           path: save.txt
-          key: save
+          key: ${{ runner.os }}-save-
 
       - name: validate cache
         run: |
