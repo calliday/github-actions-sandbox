@@ -49,7 +49,5 @@ jobs:
 
       - name: validate cache
         run: |
-          cat save.txt
-          echo $TEST_TEXT
           [[ $(cat save.txt) == "$TEST_TEXT" ]]
 
