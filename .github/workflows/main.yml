@@ -38,6 +38,7 @@ jobs:
             {{ runner.os }}-save-
   
   test:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
